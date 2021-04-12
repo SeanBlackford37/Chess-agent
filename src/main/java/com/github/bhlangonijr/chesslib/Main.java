@@ -2,6 +2,8 @@ package com.github.bhlangonijr.chesslib;
 
 import java.util.List;
 
+import com.github.bhlangonijr.chesslib.move.Move;
+
 public class Main {
     public static void main(String[] args){
     // Load a FEN position into the chessboard
@@ -15,6 +17,14 @@ public class Main {
 
     //Get the piece at A1 square...
     Piece piece = board.getPiece(Square.A1);
+    System.out.println(board.toString());
+
+    board.movePiece(new Move(Square.A7, Square.A6), new MoveBackup());
+    System.out.println(board.toString());
+
+    board.movePiece(new Move(Square.D7, Square.D5), new MoveBackup());
+    System.out.println(board.toString());
+    board.movePiece(new Move(Square.E4, Square.D5), new MoveBackup());
     System.out.println(board.toString());
 
     }
