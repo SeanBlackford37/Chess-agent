@@ -1,5 +1,6 @@
 package ithaca.teamfour.chesslib.playGame;
 
+import java.util.List;
 import java.util.Scanner;
 
 import ithaca.teamfour.chesslib.Board;

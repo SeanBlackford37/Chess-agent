@@ -31,11 +31,23 @@ public class ChessGame {
     
 
         public void play(){
-            while (!board.isKingAttacked() || !board.isDraw() || !board.isStaleMate()){
+            while (!board.isMated() && !board.isDraw() && !board.isStaleMate()){
+                
                 System.out.println(board.toString());
                 takeTurn();
             }
+
             System.out.println(board.toString());
+            if (board.isStaleMate()){
+                System.out.println("Stalemate!");
+            }
+            else if(board.isDraw()){
+                System.out.println("Draw!");
+            }
+            else{
+                System.out.println("Checkmate!");
+                System.out.println(turn + " wins");
+            }
         }
     
         public boolean takeTurn(){

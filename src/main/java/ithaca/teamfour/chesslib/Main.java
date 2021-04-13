@@ -6,6 +6,7 @@ import java.util.List;
 import ithaca.teamfour.chesslib.move.Move;
 import ithaca.teamfour.chesslib.playGame.ChessGame;
 import ithaca.teamfour.chesslib.playGame.HumanPlayer;
+import ithaca.teamfour.chesslib.playGame.RandomPlayer;
 
 
 
@@ -34,7 +35,7 @@ public class Main {
     System.out.println(board.toString());
     */
 
-    ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new HumanPlayer());
+    ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new RandomPlayer());
     game.play();
 
     }
