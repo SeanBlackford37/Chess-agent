@@ -69,7 +69,7 @@ public class ChessGame {
         private boolean makeMove(ChessPlayer player, char symbol){
             List<Move> allValidMoves = board.legalMoves();
             if (!allValidMoves.isEmpty()){
-                Move square = player.chooseMove(board, symbol);
+                Move square = player.chooseMove(board.clone(), symbol);
                 if(allValidMoves.contains(square)){
                     board.doMove(square);
                     return true;
