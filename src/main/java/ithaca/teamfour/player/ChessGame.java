@@ -18,14 +18,15 @@ public class ChessGame {
     
         public ChessGame(Board board, ChessPlayer WPlayer, ChessPlayer BPlayer){
             this.board = board;
-            this.WPlayer = WPlayer;
-            this.BPlayer = BPlayer;
+            turn = 'W';
             
             if (random.nextInt(2) == 1){
-                turn = 'W';
+                this.WPlayer = WPlayer;
+                this.BPlayer = BPlayer;
             }
             else {
-                turn='B';
+                this.WPlayer = BPlayer;
+                this.BPlayer = WPlayer;
             }
         }
     
