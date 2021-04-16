@@ -49,7 +49,10 @@ public class SimpleReflexAgentSean implements ChessPlayer {
             int index = random.nextInt(allValidMoves.size());
             randMove = allValidMoves.get(index);
             
-            if (curBoard.getPiece(randMove.getFrom()).getPieceSide().toString().equalsIgnoreCase(yourSide)){
+            Board copyBoard = curBoard.clone();
+            copyBoard.doMove(randMove);
+
+            if (curBoard.getPiece(randMove.getFrom()).getPieceSide().toString().equalsIgnoreCase(yourSide) && !copyBoard.isDraw()){
                     good = 1;
             } 
         }
