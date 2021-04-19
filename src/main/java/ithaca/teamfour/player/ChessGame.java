@@ -46,6 +46,12 @@ public class ChessGame {
                 System.out.println("Draw!");
             }
             else{
+                if(turn == 'B'){
+                    turn = 'W';
+                }
+                else{
+                    turn = 'B';
+                }
                 System.out.println("Checkmate!");
                 System.out.println(turn + " wins");
             }
