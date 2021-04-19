@@ -5,6 +5,7 @@ import com.github.bhlangonijr.chesslib.Board;
 import ithaca.teamfour.player.ChessGame;
 import ithaca.teamfour.player.HumanPlayer;
 import ithaca.teamfour.player.RandomPlayer;
+import ithaca.teamfour.player.SetBeginAgent;
 
 public class ChessMain {
     public static void main(String[] args){
@@ -31,7 +32,7 @@ public class ChessMain {
     System.out.println(board.toString());
     */
 
-    ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new RandomPlayer());
+    ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new SetBeginAgent());
     game.play();
 
     }
