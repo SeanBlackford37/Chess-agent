@@ -8,7 +8,7 @@ Notes to clarify where the sensor and actuator interfaces are located in the cod
 
 Is the agent a simple reflex, model-based reflex, or some other kind of agent? Simple rules-based reflex agent
 
-A note about where this simple AI agent code is located in the project:
+A note about where this simple AI agent code is located in the project: \
 src\main\java\ithaca\teamfour\player\...
 
 
