@@ -5,7 +5,9 @@ import com.github.bhlangonijr.chesslib.Board;
 import ithaca.teamfour.player.ChessGame;
 import ithaca.teamfour.player.HumanPlayer;
 import ithaca.teamfour.player.RandomPlayer;
+import ithaca.teamfour.player.SetBeginAgent;
 import ithaca.teamfour.player.SimpleReflexAgentSean;
+
 
 public class ChessMain {
     public static void main(String[] args){
@@ -31,6 +33,7 @@ public class ChessMain {
     board.movePiece(new Move(Square.E4, Square.D5), new MoveBackup());
     System.out.println(board.toString());
     */
+
                                                 //White                 //Black
     ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgentSean());
     game.play();
