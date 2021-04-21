@@ -11,7 +11,7 @@ import ithaca.teamfour.player.SimpleReflexAgentSean;
 
 public class ChessMain {
     public static void main(String[] args){
-        /** 
+    /** 
     // Load a FEN position into the chessboard
     String fen = "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1";
     Board board = new Board();
@@ -35,7 +35,8 @@ public class ChessMain {
     */
 
     //ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgentSean());
-    ChessGame game = new ChessGame(new Board(), new SetBeginAgent(), new SimpleReflexAgentSean());
+    //ChessGame game = new ChessGame(new Board(), new SetBeginAgent(), new SimpleReflexAgentSean());
+    ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new SimpleReflexAgentSean());
     game.play();
 
     }
