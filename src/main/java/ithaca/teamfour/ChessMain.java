@@ -34,8 +34,8 @@ public class ChessMain {
     System.out.println(board.toString());
     */
 
-                                                //White                 //Black
-    ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgentSean());
+    //ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgentSean());
+    ChessGame game = new ChessGame(new Board(), new SetBeginAgent(), new SimpleReflexAgentSean());
     game.play();
 
     }
