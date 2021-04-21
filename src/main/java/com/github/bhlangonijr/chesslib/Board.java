@@ -24,6 +24,7 @@ import com.github.bhlangonijr.chesslib.util.XorShiftRandom;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
@@ -1537,29 +1538,38 @@ public class Board implements Cloneable, BoardEvent {
      */
     public String toStringFromViewPoint(Side side) {
         StringBuilder sb = new StringBuilder();
+        int rowNumber = 0;
+        
 
         final Supplier<IntStream> rankIterator = side == Side.WHITE
                 ? Board::sevenToZero : Board::zeroToSeven;
         final Supplier<IntStream> fileIterator = side == Side.WHITE
                 ? Board::zeroToSeven : Board::sevenToZero;
 
+
         rankIterator.get().forEach(i -> {
+
+            
             Rank r = Rank.allRanks[i];
             fileIterator.get().forEach(n -> {
+                
                 File f = File.allFiles[n];
                 if (!File.NONE.equals(f) && !Rank.NONE.equals(r)) {
                     Square sq = Square.encode(r, f);
                     Piece piece = getPiece(sq);
                     if (Piece.NONE.equals(piece)) {
-                        sb.append(".");
+
+                        //formating the board
+                        sb.append("| .");
                     } else {
-                        sb.append(Constants.getPieceNotation(piece));
+                        //formating the board 
+                        sb.append("| " + Constants.getPieceNotation(piece));
                     }
                 }
             });
             sb.append("\n");
         });
-
+       
         return sb.toString();
     }
 
@@ -1573,7 +1583,8 @@ public class Board implements Cloneable, BoardEvent {
 
     @Override
     public String toString() {
-        return toStringFromWhiteViewPoint() + "Side: " + getSideToMove();
+        
+        return toStringFromWhiteViewPoint() + "   A  B  C  D  E  F  G  H \n Side: " + getSideToMove();
     }
 
     @Override
