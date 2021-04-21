@@ -23,7 +23,7 @@ public class SetBeginAgent implements ChessPlayer{
 
     public Move chooseMove(Board curBoard, char yourSymbol){
         Move randMove = null;
-        List<Move> allValidMoves = curBoard.legalMoves();
+        List<Move> allValidMoves = ChessGame.getValidMoves(curBoard, yourSymbol);
         if (allValidMoves.isEmpty()){
             return null;
         }
@@ -82,39 +82,16 @@ public class SetBeginAgent implements ChessPlayer{
                 }
                 else{
                     //random
-                    int good = 0;
-                    while (good != 1){
-                        int index = random.nextInt(allValidMoves.size());
-                        randMove = allValidMoves.get(index);
-                        
-                        if (yourSymbol==('W')){
-                            if (curBoard.getPiece(randMove.getFrom()).getPieceSide().toString().contains("WHITE")){
-                                good = 1;
-                            } 
-                        }
-                        else if(curBoard.getPiece(randMove.getFrom()).getPieceSide().toString().contains("BLACK")){
-                            good = 1;
-                        }
-                    }
+                    int index = random.nextInt(allValidMoves.size());
+                    randMove = allValidMoves.get(index);
                     return (randMove);
                 }
             }
             else{
                 //random
-                int good = 0;
-                while (good != 1){
-                    int index = random.nextInt(allValidMoves.size());
-                    randMove = allValidMoves.get(index);
-                    
-                    if (yourSymbol==('W')){
-                        if (curBoard.getPiece(randMove.getFrom()).getPieceSide().toString().contains("WHITE")){
-                            good = 1;
-                        } 
-                    }
-                    else if(curBoard.getPiece(randMove.getFrom()).getPieceSide().toString().contains("BLACK")){
-                        good = 1;
-                    }
-                }
+                
+                int index = random.nextInt(allValidMoves.size());
+                randMove = allValidMoves.get(index);
                 return (randMove);
             }
         }

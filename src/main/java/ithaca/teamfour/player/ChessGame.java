@@ -91,8 +91,8 @@ public class ChessGame {
             }
         }
 
-        public List<Move> getValidMoves(Board curBoard, char symbol){
-            List<Move> allValidMoves = board.legalMoves();
+        public static List<Move> getValidMoves(Board curBoard, char symbol){
+            List<Move> allValidMoves = curBoard.legalMoves();
             List<Move> forPlayer = new ArrayList<>();
             for (int i =0; i< allValidMoves.size(); i++){
                 if (symbol==('W')){
