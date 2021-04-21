@@ -6,10 +6,10 @@ Simple rules-based reflex agent and opening move agent
 Simple AI agent code location: \
 src\main\java\ithaca\teamfour\player…
 
-Instructions on how to set up/run the unit tests of the environment: <br /> 
+How to set up/run the unit tests of the environment: <br /> 
 Unit testing can not be done on this environment 
 
-Instructions on how a human can act as an agent: \
+How a human can act as an agent: \
 Run the ChessMain and enter coordinates of a move you want to do on your turn
 
 The sensor and actuator interfaces are located in the codebase: \
