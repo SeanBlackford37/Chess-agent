@@ -6,7 +6,7 @@ Simple rules-based reflex agent and opening move agent
 Simple AI agent code location: \
 src\main\java\ithaca\teamfour\player…
 
-Instructions on how to set up/run the unit tests of the environment:\		
+Instructions on how to set up/run the unit tests of the environment:  \		
 Unit testing can not be done on this environment 
 
 Instructions on how a human can act as an agent: \
