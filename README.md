@@ -7,7 +7,7 @@ Simple AI agent code location: \
 src\main\java\ithaca\teamfour\player…
 
 How to set up/run the unit tests of the environment: <br /> 
-Unit testing can not be done on this environment 
+Unit testing (Made sure the AI is doing things correctly)
 
 How a human can act as an agent: \
 Run the ChessMain and enter coordinates of a move you want to do on your turn
