@@ -1,16 +1,22 @@
 A link to the agent definition document: https://docs.google.com/document/d/1KTfTqp9OfzO11Uu8zZHY91P2_iA9BP6XXEqV7WZMFqA/edit?usp=sharing
 
-Instructions on how to set up/run the unit tests of the environment:
+Internal Agent: \
+Simple rules-based reflex agent and opening move agent
 
-Instructions on how a human can act as an agent:
+Simple AI agent code location: \
+src\main\java\ithaca\teamfour\player…
 
-Notes to clarify where the sensor and actuator interfaces are located in the codebase: \
+How to set up/run the unit tests of the environment: <br /> 
+Unit testing (Made sure the AI is doing things correctly)
+
+How a human can act as an agent: \
+Run the ChessMain and enter coordinates of a move you want to do on your turn
+
+The sensor and actuator interfaces are located in the codebase: \
 src\main\java\ithaca\teamfour\player\ChessGame.java
 
-Is the agent a simple reflex, model-based reflex, or some other kind of agent? Simple rules-based reflex agent
+Simple Agent Doc: https://docs.google.com/document/d/1HFow4WrWSdqmH6UTLfXDb4flktN6dIYXJNHY2sGrCs0/edit?usp=sharing
 
-A note about where this simple AI agent code is located in the project: \
-src\main\java\ithaca\teamfour\player\...
 
 
 Credit for chess game:   
