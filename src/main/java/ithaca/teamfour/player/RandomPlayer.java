@@ -5,6 +5,8 @@ import java.util.Random;
 import com.github.bhlangonijr.chesslib.Board;
 import com.github.bhlangonijr.chesslib.move.Move;
 
+import ithaca.teamfour.ChessGame;
+
 
 public class RandomPlayer implements ChessPlayer{
     private static Random random = new Random();

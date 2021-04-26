@@ -8,6 +8,8 @@ import com.github.bhlangonijr.chesslib.Board;
 import com.github.bhlangonijr.chesslib.Square;
 import com.github.bhlangonijr.chesslib.move.Move;
 
+import ithaca.teamfour.ChessGame;
+
 public class SetBeginAgent implements ChessPlayer{
     private int moveCount;
     private int setIndex;

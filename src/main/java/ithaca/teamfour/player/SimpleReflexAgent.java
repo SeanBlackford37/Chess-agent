@@ -7,7 +7,7 @@ import com.github.bhlangonijr.chesslib.Board;
 import com.github.bhlangonijr.chesslib.Piece;
 import com.github.bhlangonijr.chesslib.move.Move;
 
-public class SimpleReflexAgentSean implements ChessPlayer {
+public class SimpleReflexAgent implements ChessPlayer {
     private static Random random = new Random();
 
     public Move chooseMove(Board curBoard, char yourSymbol){

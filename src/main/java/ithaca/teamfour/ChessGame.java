@@ -1,4 +1,4 @@
-package ithaca.teamfour.player;
+package ithaca.teamfour;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,8 @@ import java.util.Random;
 
 import com.github.bhlangonijr.chesslib.Board;
 import com.github.bhlangonijr.chesslib.move.Move;
+
+import ithaca.teamfour.player.ChessPlayer;
 
 
 public class ChessGame {
@@ -21,6 +23,9 @@ public class ChessGame {
             this.board = board;
             turn = 'W';
             
+           // this.WPlayer = WPlayer;
+           // this.BPlayer = BPlayer;
+
             if (random.nextInt(2) == 1){
                 this.WPlayer = WPlayer;
                 this.BPlayer = BPlayer;
@@ -39,7 +44,7 @@ public class ChessGame {
                 takeTurn();
             }
 
-            System.out.println(board.toString());
+           System.out.println(board.toString());
             if (board.isStaleMate()){
                 System.out.println("Stalemate!");
             }

@@ -2,12 +2,11 @@ package ithaca.teamfour;
 
 import com.github.bhlangonijr.chesslib.Board;
 
-import ithaca.teamfour.player.ChessGame;
 import ithaca.teamfour.player.HumanPlayer;
 import ithaca.teamfour.player.RandomPlayer;
 import ithaca.teamfour.player.SetBeginAgent;
-import ithaca.teamfour.player.SimpleReflexAgentSean;
-
+import ithaca.teamfour.player.SimpleReflexAgent;
+import ithaca.teamfour.player.SearchBasedAgent;
 
 public class ChessMain {
     public static void main(String[] args){
@@ -34,9 +33,14 @@ public class ChessMain {
     System.out.println(board.toString());
     */
 
-    //ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgentSean());
-    //ChessGame game = new ChessGame(new Board(), new SetBeginAgent(), new SimpleReflexAgentSean());
-    ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new SimpleReflexAgentSean());
+    //ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgent());
+    //ChessGame game = new ChessGame(new Board(), new SetBeginAgent(), new SimpleReflexAgent());
+    //ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new SimpleReflexAgent());
+    // for(int i = 0; i < 20; i++){
+    //     ChessGame game = new ChessGame(new Board(), new SearchBasedAgent(3), new SearchBasedAgent(3));
+    //     game.play();
+    // }
+    ChessGame game = new ChessGame(new Board(), new SearchBasedAgent(3), new SearchBasedAgent(3));
     game.play();
 
     }
