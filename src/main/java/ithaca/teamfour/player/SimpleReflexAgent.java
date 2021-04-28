@@ -45,6 +45,8 @@ public class SimpleReflexAgent implements ChessPlayer {
         }
             
         //Will only go to this while loop if all valid moves can't take a piece
+        return null;
+        /*
         while (good != 1){
             int index = random.nextInt(allValidMoves.size());
             randMove = allValidMoves.get(index);
@@ -57,6 +59,7 @@ public class SimpleReflexAgent implements ChessPlayer {
             } 
         }
         return (randMove);
+        */
         }
     }
 }   

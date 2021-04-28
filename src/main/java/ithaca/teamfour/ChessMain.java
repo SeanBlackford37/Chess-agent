@@ -1,7 +1,12 @@
 package ithaca.teamfour;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import com.github.bhlangonijr.chesslib.Board;
 
+import ithaca.teamfour.player.ChessPlayer;
 import ithaca.teamfour.player.HumanPlayer;
 import ithaca.teamfour.player.RandomPlayer;
 import ithaca.teamfour.player.SetBeginAgent;
@@ -40,7 +45,8 @@ public class ChessMain {
     //     ChessGame game = new ChessGame(new Board(), new SearchBasedAgent(3), new SearchBasedAgent(3));
     //     game.play();
     // }
-    ChessGame game = new ChessGame(new Board(), new SearchBasedAgent(3), new SearchBasedAgent(3));
+    List<ChessPlayer> player1 = new ArrayList<>(Arrays.asList(new SetBeginAgent(), new SimpleReflexAgent(), new RandomPlayer()));
+    ChessGame game = new ChessGame(new Board(), new MetaAgent(player1), new SearchBasedAgent(3));
     game.play();
 
     }

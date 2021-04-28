@@ -24,7 +24,6 @@ public class SetBeginAgent implements ChessPlayer{
     }
 
     public Move chooseMove(Board curBoard, char yourSymbol){
-        Move randMove = null;
         List<Move> allValidMoves = ChessGame.getValidMoves(curBoard, yourSymbol);
         if (allValidMoves.isEmpty()){
             return null;
@@ -83,18 +82,14 @@ public class SetBeginAgent implements ChessPlayer{
                     return temp;
                 }
                 else{
-                    //random
-                    int index = random.nextInt(allValidMoves.size());
-                    randMove = allValidMoves.get(index);
-                    return (randMove);
+                    //if cant do specific open move
+                    return null;
                 }
             }
             else{
-                //random
+                //if cant do opener move at all
                 
-                int index = random.nextInt(allValidMoves.size());
-                randMove = allValidMoves.get(index);
-                return (randMove);
+                return null;
             }
         }
     }
