@@ -1,6 +1,6 @@
-A link to the agent definition document: https://docs.google.com/document/d/1KTfTqp9OfzO11Uu8zZHY91P2_iA9BP6XXEqV7WZMFqA/edit?usp=sharing
+A link to the agent definition document: https://docs.google.com/document/d/1KTfTqp9OfzO11Uu8zZHY91P2_iA9BP6XXEqV7WZMFqA/edit?usp=sharing <br />
 
-Advanced AI Research and Application Plan: https://docs.google.com/document/d/1EwDlS-KUv8nsHqu7N7JtdMXoOBwyBQOg_kmFt-z1QQk/edit
+Advanced AI Research and Application Plan: https://docs.google.com/document/d/1EwDlS-KUv8nsHqu7N7JtdMXoOBwyBQOg_kmFt-z1QQk/edit <br />
 Internal Agent: \
 Simple rules-based reflex agent and opening move agent
 
