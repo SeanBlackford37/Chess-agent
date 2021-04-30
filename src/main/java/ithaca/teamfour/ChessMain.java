@@ -11,6 +11,7 @@ import ithaca.teamfour.player.HumanPlayer;
 import ithaca.teamfour.player.RandomPlayer;
 import ithaca.teamfour.player.SetBeginAgent;
 import ithaca.teamfour.player.SimpleReflexAgent;
+import ithaca.teamfour.player.WorseSearchBasedAgent;
 import ithaca.teamfour.player.SearchBasedAgent;
 
 public class ChessMain {
@@ -46,7 +47,7 @@ public class ChessMain {
     //     game.play();
     // }
     List<ChessPlayer> player1 = new ArrayList<>(Arrays.asList(new SetBeginAgent(), new SimpleReflexAgent(), new RandomPlayer()));
-    ChessGame game = new ChessGame(new Board(), new MetaAgent(player1), new SearchBasedAgent(3));
+    ChessGame game = new ChessGame(new Board(), new WorseSearchBasedAgent(3), new RandomPlayer());
     game.play();
 
     }

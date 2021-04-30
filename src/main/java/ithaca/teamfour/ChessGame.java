@@ -23,8 +23,8 @@ public class ChessGame {
             this.board = board;
             turn = 'W';
             
-           // this.WPlayer = WPlayer;
-           // this.BPlayer = BPlayer;
+           this.WPlayer = WPlayer;
+           this.BPlayer = BPlayer;
 
             if (random.nextInt(2) == 1){
                 this.WPlayer = WPlayer;
@@ -34,6 +34,9 @@ public class ChessGame {
                 this.WPlayer = BPlayer;
                 this.BPlayer = WPlayer;
             }
+
+            this.WPlayer = WPlayer;
+            this.BPlayer = BPlayer;
         }
     
 
