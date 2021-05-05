@@ -26,7 +26,6 @@ How a human can act as an agent: \
 Make sure to have a human player in the main where the ChessGame line is, it should look like this, but you can replace the MetaAgent with whatever secondary agent you want to play against 
 ```
 ChessGame game = new ChessGame(new Board(),  new HumanPlayer(), new MetaAgent(player1));
-
 ```
 Then run the ChessMain and enter coordinates of a move you want to do on your turn
 
