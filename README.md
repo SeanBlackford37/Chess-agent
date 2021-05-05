@@ -20,9 +20,6 @@ Search-based by depth agent <br />
 Simple AI agent code location: \
 src\main\java\ithaca\teamfour\player…
 
-How to set up/run the unit tests of the environment: <br /> 
-Unit testing (Made sure the AI is doing things correctly)
-
 How a human can act as an agent: \
 Make sure to have a human player in the main where the ChessGame line is, it should look like this, but you can replace the MetaAgent with whatever secondary agent you want to play against 
 ```
