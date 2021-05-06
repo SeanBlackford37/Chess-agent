@@ -69,8 +69,9 @@ public class SearchBasedAgent implements ChessPlayer {
         tempBoard.doMove(moveIn);
         
         if(tempBoard.isMated() && curSymbolToMove != yourSymbol){ //Check mate not by you
-            return -2;
-        }else if(tempBoard.isMated() && curSymbolToMove == yourSymbol){ //Check mate by you
+            return -3;
+        }
+        else if(tempBoard.isMated() && curSymbolToMove == yourSymbol){ //Check mate by you
             return 3;
         }
         else if(tempBoard.isKingAttacked() && curSymbolToMove != yourSymbol){ //King in check not you
@@ -82,9 +83,10 @@ public class SearchBasedAgent implements ChessPlayer {
         else if(capturedPiece != Piece.NONE && !tempBoard.isDraw()){ //Capture any piece
             return 1;
         }
-        else if(tempBoard.isDraw()){
-            return -3;
-        }else if(depthSize == 1) {
+        else if(tempBoard.isDraw()){ //Want to check more so drawing is < 
+            return -2;
+        }
+        else if(depthSize == 1) {
             return 0;
         }
         
