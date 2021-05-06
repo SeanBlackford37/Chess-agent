@@ -75,17 +75,18 @@ public class SearchBasedAgent implements ChessPlayer {
             return 3;
         }
         else if(tempBoard.isKingAttacked() && curSymbolToMove != yourSymbol){ //King in check not you
-            return -1;
+            return -2;
         }
         else if(tempBoard.isKingAttacked() && curSymbolToMove == yourSymbol){ //King in check by you
             return 2;
         }
+        else if(tempBoard.isDraw()){ 
+            return -1;
+        }
         else if(capturedPiece != Piece.NONE && !tempBoard.isDraw()){ //Capture any piece
             return 1;
         }
-        else if(tempBoard.isDraw()){ //Want to check more so drawing is < 
-            return -2;
-        }
+        
         else if(depthSize == 1) {
             return 0;
         }

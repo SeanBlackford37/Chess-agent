@@ -12,6 +12,7 @@ import ithaca.teamfour.player.RandomPlayer;
 import ithaca.teamfour.player.SetBeginAgent;
 import ithaca.teamfour.player.SimpleReflexAgent;
 import ithaca.teamfour.player.SearchBasedAgent;
+import ithaca.teamfour.player.SearchBasedAdvancedAgent;
 
 public class ChessMain {
     public static void main(String[] args){
@@ -41,13 +42,19 @@ public class ChessMain {
     //ChessGame game = new ChessGame(new Board(), new RandomPlayer(), new SimpleReflexAgent());
     //ChessGame game = new ChessGame(new Board(), new SetBeginAgent(), new SimpleReflexAgent());
     //ChessGame game = new ChessGame(new Board(), new HumanPlayer(), new SimpleReflexAgent());
-    // for(int i = 0; i < 20; i++){
-    //     ChessGame game = new ChessGame(new Board(), new SearchBasedAgent(3), new SearchBasedAgent(3));
-    //     game.play();
-    // }
-    List<ChessPlayer> player1 = new ArrayList<>(Arrays.asList(new SetBeginAgent(), new SimpleReflexAgent(), new RandomPlayer()));
-    ChessGame game = new ChessGame(new Board(), new MetaAgent(player1), new SearchBasedAgent(3));
-    game.play();
-
+    
+    
+    
+    List<ChessPlayer> player1 = new ArrayList<>(Arrays.asList(new SetBeginAgent(), new SearchBasedAgent(3), new RandomPlayer()));
+    //ChessGame game = new ChessGame(new Board(),new SearchBasedAgent(3), new SearchBasedAgent(3)); 
+    //ChessGame game = new ChessGame(new Board(),new SearchBasedAdvancedAgent(3), new SearchBasedAgent(3)); 
+    for(int i = 0; i < 10; i++){
+        ChessGame game = new ChessGame(new Board(), new MetaAgent(player1),  new SearchBasedAgent(3)); 
+        game.play(); 
+    }
+    
+    
+    
+      
     }
 }
