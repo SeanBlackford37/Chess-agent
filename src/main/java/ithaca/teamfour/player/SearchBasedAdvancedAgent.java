@@ -69,23 +69,25 @@ public class SearchBasedAdvancedAgent implements ChessPlayer {
         tempBoard.doMove(moveIn);
         
         if(tempBoard.isMated() && curSymbolToMove != yourSymbol){ //Check mate not by you
-            return -2;
-        }else if(tempBoard.isKingAttacked() && curSymbolToMove != yourSymbol){ //King in check not you
-            return -1;
+            return -3;
         }
         else if(tempBoard.isMated() && curSymbolToMove == yourSymbol){ //Check mate by you
-            return 20;
+            return 11;
+        }
+        else if(tempBoard.isKingAttacked() && curSymbolToMove != yourSymbol){ //King in check not you
+            return -1;
         }
         else if(tempBoard.isKingAttacked() && curSymbolToMove == yourSymbol){ //King in check by you
-            return 19;
+            return 10;
         }
         else if(capturedPiece != Piece.NONE){ //Capture any piece
             return pieceCaptureEval(curBoard, moveIn);
             //return 1;
         }
         else if(tempBoard.isDraw()){
-            return -3;
-        }else if(depthSize == 1) { //if the depth count reaches one
+            return -2;
+        }
+        else if(depthSize == 1) { //if the depth count reaches one
             return 0;
         }
         
@@ -135,7 +137,7 @@ public class SearchBasedAdvancedAgent implements ChessPlayer {
         }
         
         
-        return  curPieceWeight + capturedPieceWeight;
+        return capturedPieceWeight;
         // if(curPieceWeight <= capturedPieceWeight){
         //     return curPieceWeight;
         // }else{
