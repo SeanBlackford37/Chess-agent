@@ -33,7 +33,7 @@ src\main\java\ithaca\teamfour\player\ChessGame.java
 ## How to guide
 To make your own agent look to CheeseGame.java you will need to make sure the agent implements CheessPlayer <br />
 Chess player uses the function chooseMove <br />
-To add an agent to the enviroment to test you you import it to chess main where you create a new chess game and run the agent
+To add an agent to the enviroment to test you need import it to chess main where you create a new chess game and run the agent
 against another agent <br />
 
 ## Environment Set Up
