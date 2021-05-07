@@ -36,6 +36,8 @@ Chess player uses the function chooseMove <br />
 To add an agent to the enviroment to test you need import it to chess main where you create a new chess game and run the agent
 against another agent <br />
 
+## Testing
+Manual testing and running against other agents  [linked here](https://docs.google.com/document/d/1TaL72y3nENyOFzorxQN5g4t9O91049h3OqdaaSnXIDk/edit?usp=sharing)
 ## Environment Set Up
 Credit for chess environment:   
 https://github.com/bhlangonijr/chesslib
