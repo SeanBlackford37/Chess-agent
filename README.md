@@ -41,7 +41,7 @@ Need to import it in the ChessMain.java file. If using the meta agent may also n
 Manual testing and running against other agents  [linked here](https://docs.google.com/document/d/1TaL72y3nENyOFzorxQN5g4t9O91049h3OqdaaSnXIDk/edit?usp=sharing) <br />
 
 ## Non-functional 
-SearchBasedAdvanceAgent: the evaluation function of the agent didn't seem to improve the agent's gameplay so it was left out
+SearchBasedAdvancedAgent: the evaluation function of the agent didn't seem to improve the agent's gameplay so it was left out
 
 ## Environment Set Up
 Credit for chess environment:   
