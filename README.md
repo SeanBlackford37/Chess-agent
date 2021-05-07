@@ -31,10 +31,11 @@ The sensor and actuator interfaces are located in the codebase: \
 src\main\java\ithaca\teamfour\player\ChessGame.java
 
 ## How to guide
-To make your own agent look to CheeseGame.java you will need to make sure the agent implements CheessPlayer <br />
-Chess player uses the function chooseMove <br />
-To add an agent to the enviroment to test you need import it to chess main where you create a new chess game and run the agent
-against another agent <br />
+Write a class that implements our ChessPlayer Interface. 
+To add a piece to the meta agent, write it so that it can try and generate a move in the users own way and if it cannot it returns null so then it would be passed on to another part of the meta agent <br />
+Wirte a class that implements ChessPlayer and need to write a chooseMove function that returns a valid move for their side of the board. <br />
+Write this agent wherever they want, need to import it in the ChessMain.java file. If using the meta agent may also need to update the arraylist that initializes meta agent <br />
+
 
 ## Testing
 Manual testing and running against other agents  [linked here](https://docs.google.com/document/d/1TaL72y3nENyOFzorxQN5g4t9O91049h3OqdaaSnXIDk/edit?usp=sharing)
