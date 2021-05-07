@@ -30,6 +30,11 @@ Then run the ChessMain and enter coordinates of a move you want to do on your tu
 The sensor and actuator interfaces are located in the codebase: \
 src\main\java\ithaca\teamfour\player\ChessGame.java
 
+##How to guide
+To make your own agent look to CheeseGame.java you will need to make sure the agent implement Cheess player <br />
+Chess player uses chooseMove <br />
+To add an agent to the enviroment to test you you import it to chess main where you create a new chess game and run the agent
+against another agent <br />
 
 ## Environment Set Up
 Credit for chess environment:   
