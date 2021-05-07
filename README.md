@@ -34,7 +34,7 @@ src\main\java\ithaca\teamfour\player\ChessGame.java
 Write a class that implements our ChessPlayer Interface. 
 To add a piece to the meta agent, write it so that it can try and generate a move in the users own way and if it cannot it returns null so then it would be passed on to another part of the meta agent <br />
 Wirte a class that implements ChessPlayer and need to write a chooseMove function that returns a valid move for their side of the board. <br />
-Write this agent wherever they want, need to import it in the ChessMain.java file. If using the meta agent may also need to update the arraylist that initializes meta agent <br />
+Need to import it in the ChessMain.java file. If using the meta agent may also need to update the arraylist that initializes meta agent <br />
 
 
 ## Testing
